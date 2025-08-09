@@ -1,212 +1,68 @@
 :root {
-  --primary-color: #c4ee50;
+  --primary-color: #050503;
   --secondary-color: rgb(165, 173, 158);
-  --accent1-color: #40bbe4;
+  --accent1-color: #097934d0;
   --accent2-color: #eb3131;
   --heading-font: 'Roboto', sans-serif;
   --text-font: 'Roboto Condensed', sans-serif;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: var(--text-font);
-  line-height: 1.6;
-  background-color: #97d0eb;
-  color: #333;
+  color: var(--primary-color);
+  background-color: var(--accent1-color);
 }
 
-/* Header */
-header {
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.header-container {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 100px;
-  max-width: 1100px;
+header, main, footer {
+  max-width: 840px;
   margin: 0 auto;
 }
 
-.header-container img,
-header .logo img {
-  width: 100px;
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
 }
 
-nav ul li a {
+.socialmedia a {
   text-decoration: none;
-  color: var(--secondary-color);
-  font-family: var(--text-font);
-  font-weight: bold;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Main Heading */
-main h1 {
-  text-align: center;
-  margin: 2rem 0 1rem;
-  color: var(--accent1-color);
-}
-
-/* Contact Info + Map Section */
-.contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 1rem 2rem;
   justify-content: space-between;
-  background-color: #fff;
-  margin: 1rem auto;
+  gap: 2rem;
 }
 
-.contact-info .info {
-  flex: 1;
-  min-width: 250px;
+.hero1 {
+  position: relative;
 }
 
-.contact-info .map {
-  flex: 1;
-  min-width: 300px;
-}
-
-.contact-info .map iframe {
+.hero1 img {
+  display: block;
   width: 100%;
-  height: 300px;
-  border: none;
+  height: auto;
+  
 }
 
-/* Contact Form */
-.contact-form {
-  background-color: #fff;
-  padding: 2rem;
-  margin: 1rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-  margin-bottom: 1rem;
-  color: var(--accent1-color);
-}
-
-.contact-form form {
-  display: grid;
-  gap: 1rem;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+h1 {
+  position: absolute;
+  top: 20px;
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form input[type="radio"],
-.contact-form input[type="checkbox"] {
-  margin-right: 0.5rem;
-}
-
-.contact-form button {
-  padding: 0.75rem;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
   background-color: var(--accent1-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
+  color: #000;
 }
 
-.contact-form button:hover {
-  background-color: #005fa3;
+.hero1 article img {
+  float: right;
+  width: 125px;
 }
-
-/* Employee Profiles */
-.employees {
-  padding: 2rem;
-  text-align: center;
-}
-
-.employees h2 {
-  color: var(--accent1-color);
-  margin-bottom: 1rem;
-}
-
-.employee-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.employee-container figure {
-  width: 200px;
-}
-
-.employee-container img {
-  width: 100%;
-  border-radius: 10px;
-  border: 2px solid #ccc;
-}
-
-.employee-container figcaption {
-  margin-top: 0.5rem;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  flex-wrap: wrap;
-  color: white;
-  text-align: center;
-}
-
-footer p {
-  font-family: var(--text-font);
-  font-size: 0.9rem;
-  margin: 0;
-  color: #0e0d0d;
-}
-
-footer .socialmedia {
-  display: flex;
-  gap: 15px;
-}
-
-footer .socialmedia img {
-  width: 30px;
-  height: 30px;
-}
-
-footer a {
-  color: #0e0d0d;
